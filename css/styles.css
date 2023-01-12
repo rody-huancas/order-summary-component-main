@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --PaleBlue: hsl(225, 100%, 94%);
+  --BrightBlue: hsl(245, 75%, 52%);
+  --BrightBlueHover: hsla(245, 75%, 52%, 0.646);
+  --VeryPaleBlue: hsl(225, 100%, 98%);
+  --DesaturatedBlue: hsl(224, 23%, 55%);
+  --DarkBlue: hsl(223, 47%, 23%);
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /*Para que 1rem = 10px*/
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-color: var(--PaleBlue);
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  height: 100vh;
+  position: relative;
+}
+
+.target {
+  width: 350px;
+  height: 570px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: var(--white);
+  border-radius: 1.5rem;
+}
+
+.target .target-container {
+  width: 100%;
+  height: 65%;
+  padding: 3rem 3rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.target .target-img img {
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.target-container .target-title {
+  font-weight: 900;
+  color: var(--DarkBlue);
+  font-size: 2.4rem;
+}
+
+.target-container .target-description {
+  font-size: 1.6rem;
+  color: var(--DesaturatedBlue);
+}
+
+.target-container .target-plan {
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.target-container .target-plan .plan-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.target-container .target-plan .plan-container .plan-img img {
+  width: 4rem;
+}
+
+.target-container .target-plan .plan-container .plan-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.target-container .target-plan .plan-container .plan-text .annual {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: var(--DarkBlue);
+}
+
+.target-container .target-plan .change {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: var(--BrightBlue);
+  text-decoration: underline;
+  transition: all 0.5s ease;
+}
+
+.target-container .target-plan .change:hover {
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.target-container .target-button {
+  background-color: var(--BrightBlue);
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--VeryPaleBlue);
+  font-weight: 700;
+  transition: background-color 0.5s ease;
+}
+
+.target-container .target-button:hover {
+  background-color: var(--BrightBlueHover);
+  cursor: pointer;
+}
+
+.target-container .target-cancel {
+  border: none;
+  background-color: var(--white);
+  color: var(--DesaturatedBlue);
+  font-weight: 900;
+  transition: color 0.5s ease;
+}
+
+.target-container .target-cancel:hover {
+  color: var(--DarkBlue);
+  cursor: pointer;
+}
+
+.attribution {
+  position: absolute;
+  margin-top: -7rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--DesaturatedBlue);
+  bottom: 5rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.attribution a {
+  position: relative;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--DarkBlue);
+  cursor: pointer;
+}
